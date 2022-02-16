@@ -1,24 +1,24 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-var cors = require('cors');
+// var cors = require('cors');
 const stripe = require('stripe')('sk_test_51KP6OgCU7wHmOgIeOzCGrwvAHsBA5J3LxUO3De4D24UwBw2ZmfbWufRL9mOGI5bXpqmRvBKI7rJmuRCuROgsGbhV000lpLt332');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}) );
-const corsOpts = {
-  origin: '*',
+// const corsOpts = {
+//   origin: '*',
 
-  methods: [
-    'GET',
-    'POST',
-  ],
+//   methods: [
+//     'GET',
+//     'POST',
+//   ],
 
-  allowedHeaders: [
-    'Content-Type',
-  ],
-};
+//   allowedHeaders: [
+//     'Content-Type',
+//   ],
+// };
 
-app.use(cors(corsOpts));
+// app.use(cors(corsOpts));
 
 app.all("/*", function(req, res, next){
   res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
