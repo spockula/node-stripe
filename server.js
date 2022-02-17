@@ -5,20 +5,6 @@ const app = express();
 const stripe = require('stripe')('sk_test_51KP6OgCU7wHmOgIeOzCGrwvAHsBA5J3LxUO3De4D24UwBw2ZmfbWufRL9mOGI5bXpqmRvBKI7rJmuRCuROgsGbhV000lpLt332');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}) );
-// const corsOpts = {
-//   origin: '*',
-
-//   methods: [
-//     'GET',
-//     'POST',
-//   ],
-
-//   allowedHeaders: [
-//     'Content-Type',
-//   ],
-// };
-
-// app.use(cors(corsOpts));
 
 app.all("/*", function(req, res, next){
   res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
